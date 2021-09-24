@@ -1,0 +1,31 @@
+.titles {
+    @include flex(row, space-between, center);
+    padding: 1rem 0 1rem;
+    position: relative;
+
+    h2 {
+        font-size: 1.25rem;
+        font-family: $title-bold-font;
+        color: $primary-color;
+        margin-bottom: 0.5rem;
+        @include noselect;
+    }
+
+    h3 {
+        font-size: 1.15rem;
+        @include noselect;
+    }
+
+    .buttons {
+        @include flex(row, center, center);
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: $tablet-size) {
+    .titles {
+        button {
+            margin-top: 0.5rem;
+        }
+    }
+}

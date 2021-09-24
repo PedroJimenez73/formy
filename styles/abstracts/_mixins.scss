@@ -1,0 +1,18 @@
+@mixin border-design() {
+    border-radius: 0;
+}
+
+@mixin flex($a, $b, $c) {
+    display: flex;
+    flex-direction: $a;
+    justify-content: $b;
+    align-items: $c;
+}
+
+@mixin noselect {
+    user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+}

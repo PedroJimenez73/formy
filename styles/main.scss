@@ -1,0 +1,214 @@
+@import './abstracts/animations';
+@import './abstracts/mixins';
+@import './abstracts/variables';
+
+@import './base/reset';
+@import './base/typography';
+
+@import './components/accordion';
+@import './components/associate';
+@import './components/buttons';
+@import './components/cards';
+@import './components/donut';
+@import './components/flips';
+@import './components/quotes';
+@import './components/questions';
+@import './components/forms';
+@import './components/lists';
+@import './components/links';
+@import './components/modals';
+@import './components/piccarousel';
+@import './components/postit';
+@import './components/spinner';
+@import './components/tables';
+@import './components/titles';
+@import './components/tree';
+@import './components/videos';
+
+@import './layout/aside';
+@import './layout/containers';
+@import './layout/footer';
+@import './layout/header';
+
+@import './pages/hero';
+
+
+html {
+    font-size: 20px;
+}
+
+@media (max-width: $pc-size) {
+    html {
+        font-size: 19px; 
+    }
+}
+
+@media (max-width: $laptop-size) {
+    html {
+        font-size: 18px; 
+    }
+}
+
+@media (max-width: $tablet-size) {
+    html {
+        font-size: 17px; 
+    }
+}
+
+@media (max-width: $mobile-size) {
+    html {
+        font-size: 16px; 
+    }
+}
+
+body {
+    color: $regular-font-color;
+    font-family: $text-font;
+}
+
+h1 {
+    font-family: $title-bold-font;
+    font-size: 1.5rem;
+}
+
+h2 {
+    color: $regular-font-color;
+    font-family: $title-font;
+}
+
+h2.profile {
+    color: $primary-color;
+}
+
+h3 {
+    color: $regular-font-color;
+    font-family: $title-font;
+}
+
+p {
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+p.center,
+h3.center {
+    text-align: center;
+}
+
+p.instructions {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #e41b1b;
+    text-align: center;
+}
+
+p.pic-footer {
+    font-size: 0.8rem;
+    padding: 0.3rem 1rem;
+    background-color: #b9b9b9;
+    text-align: center;
+    @include noselect;
+}
+
+b {
+    color: $primary-color;
+    font-family: $text-bold-font;
+}
+
+a {
+    transition: 400ms ease-in-out all;
+    color: $primary-color;
+    word-break: break-all;
+
+    &:hover,
+    &:visited {
+        color: $darker-primary-color;
+    }
+}
+
+img.pic-profile {
+    width: 200px;
+    height: 200px;
+    border: 8px solid $primary-color;
+    border-radius: 60%;
+}
+
+.glossary-word {
+    color: $primary-color;
+    font-weight: bold;
+    cursor: pointer;
+    @include noselect();
+
+    .highlight {
+        background-color: initial;
+    }
+
+    img {
+        display: inline;
+        height: 0.8rem;
+        margin-right: 0.1rem;
+        margin-bottom: 0;
+    }
+}
+
+img,
+video {
+    max-width: 100%;
+}
+
+img.medium-pic {
+    display: block;
+    margin: 1rem auto;
+    max-width: $mobile-size;
+}
+
+img.big-pic {
+    display: block;
+    margin: 1rem auto;
+    max-width: $tablet-size;
+}
+
+iframe {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+span.highlight,
+p.highlight,
+li.highlight,
+b.highlight,
+a.highlight {
+    background-color: yellow;
+}
+
+button {
+    span.highlight,
+    p.highlight,
+    li.highlight,
+    b.highlight,
+    a.highlight {
+        background-color: inherit;
+    }
+}
+
+.titles h2,
+.titles h3,
+.accordion-title,
+.accordion-content,
+.tempor,
+.counter,
+.super-text,
+.quote-container,
+.link-container,
+.flips-container,
+.pic-footer,
+.glossary  {
+    span.highlight,
+    p.highlight,
+    li.highlight,
+    b.highlight,
+    a.highlight {
+        background-color: inherit;
+    }
+}

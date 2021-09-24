@@ -1,0 +1,75 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 10000000;
+    padding: 2rem 1rem 1rem;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    @include flex(row, center, flex-start);
+    display: none;
+    opacity: 0;
+    transition: 600ms opacity linear;
+
+    .modal {
+        display: block;
+        background-color: white;
+        width: 440px;
+        padding-bottom: 1rem;
+
+        .modal-header {
+            padding: 0 1rem;
+            border-bottom: 1px solid #a1a1a1;
+            @include flex(row, space-between, center);
+            .modal-title {
+                color: $primary-color;
+                font-size: 1rem;
+                font-weight: 400;
+                @include noselect;
+            }
+            span {
+                font-size: 2.5rem;
+                font-weight: 400;
+                cursor: pointer;
+                color: $regular-font-color;
+                background-color: initial;
+                @include noselect;
+            }
+        }
+        .modal-body {
+            display: block;
+            margin-top: 0.5rem;
+            padding: 0.5rem 1rem;
+
+            p {
+                text-align: left;
+                background-color: initial;
+            }
+
+            .modal-paragraph {
+                font-size: 0.9rem;
+                margin-bottom: 0.5rem;
+                line-height: 1.5;
+                color: $regular-font-color;
+                font-weight: 400;
+                @include noselect;
+                background-color: initial;
+            }
+        }
+
+        &.jumbo {
+            width: auto;
+            max-width: $laptop-size;
+            max-height: calc(100vh - 4rem);
+            overflow-y: auto;
+        }
+    }
+
+
+    &.open {
+        display: flex;
+    }
+
+}

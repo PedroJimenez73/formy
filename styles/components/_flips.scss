@@ -1,0 +1,79 @@
+.flips-container {
+    width: 100%;
+    @include flex(row, space-around, center);
+    flex-wrap: wrap;
+
+    .flip-card {
+        position: relative;
+        margin: 1.5rem;
+        width: 440px;
+        height: 490px;
+        transform-style: preserve-3d;
+        transition: 2s;
+        cursor: pointer;
+
+        &.turn {
+            transform: rotatey(180deg);
+        }
+
+        .front-card {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #c2c2c2;
+            color: white;
+            transform: rotateY(0deg);
+            -webkit-backface-visibility: hidden;
+            -moz-backface-visibility: hidden;
+            backface-visibility: hidden;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+
+            p {
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+                padding: 0.5rem;
+                margin-bottom: 0;
+                background-color: $primary-color;
+                color: white;
+                font-weight: bold;
+                text-align: center;
+                -webkit-backface-visibility: hidden;
+                -moz-backface-visibility: hidden;
+                backface-visibility: hidden;
+                transition: ease-in-out 300ms all;
+                @include noselect();
+            }
+
+            &:hover p {
+                background-color: $darker-primary-color;
+            }
+        }
+
+        .back-card {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #f3f3f3;
+            color: #404040;
+            padding: 1rem;
+            transform: rotateY(180deg);
+            -webkit-backface-visibility: hidden;
+            -moz-backface-visibility: hidden;
+            backface-visibility: hidden;
+            overflow-y: auto;
+            @include noselect();
+        }
+    }
+
+}

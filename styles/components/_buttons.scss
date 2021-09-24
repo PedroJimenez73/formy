@@ -1,0 +1,77 @@
+button {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    @include border-design();
+    border: 1px solid $primary-color;
+    background-color: $primary-color;
+    color: white;
+    transition: all 600ms ease-in-out;
+    cursor: pointer;
+    @include noselect;
+
+    &:hover {
+        border: 1px solid $darker-primary-color;
+        background-color: $darker-primary-color;
+    }
+
+    &:disabled {
+        cursor: not-allowed
+    }
+}
+
+button.outline {
+    background-color: white;
+    color: $primary-color;
+    transition: all 600ms ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        color: white;
+        border: 1px solid $primary-color;
+        background-color: $primary-color;
+    }
+    &:disabled {
+        cursor: not-allowed
+    }
+}
+
+button.outline.danger {
+    background-color: white;
+    border: 1px solid $danger-color;
+    color: $danger-color;
+    transition: all 600ms ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        color: white;
+        border: 1px solid $danger-color;
+        background-color: $danger-color;
+    }
+    &:disabled {
+        cursor: not-allowed
+    }
+}
+
+button.solid {
+    font-size: 0.8rem;
+    border: 1px solid white;
+    background-color: $primary-color;
+
+    &:hover {
+        background-color: $darker-primary-color
+    }
+}
+
+button.icon {
+    padding: 0.5rem 0.5rem 0.3rem;
+
+    img {
+        height: 1.2rem;
+    }
+
+    &:hover,
+    &.completed {
+        background-color: #00bfff7c;
+    }
+}
+

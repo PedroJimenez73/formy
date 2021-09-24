@@ -1,0 +1,42 @@
+
+.footer {
+    background-color: #424242;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.footer p {
+    color:rgba(255, 255, 255, 0.8);
+}
+
+.footer p.title {
+    color: white;
+    font-weight: bold;
+}
+
+.footer img.rrss {
+    height: 48px;
+    cursor: pointer;
+}
+
+.footer a {
+    font-size: 0.8rem;
+    color:rgba(255, 255, 255, 0.8);
+    transition: 400ms ease-in-out all;
+}
+
+.footer a:hover {
+    color: white;
+}
+
+.footer .copyright {
+    color:rgba(255, 255, 255, 0.8);
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 0 1rem;
+}
+@media (max-width: $tablet-size) {
+    .footer .col-33:nth-child(3) {
+        padding-top: 1rem;
+    }
+}

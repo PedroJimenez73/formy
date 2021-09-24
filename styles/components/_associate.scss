@@ -1,0 +1,32 @@
+.associate {
+    .item {
+        width: 440px;
+        margin: 1rem auto;
+        text-align: center; 
+        box-shadow: $shadow;
+        background-color: white;
+        border: 1px solid #d3d3d3;
+        padding: 1rem;
+        cursor: pointer;
+
+        &.selected {
+            background-color: $aux-color;
+            color: white;
+        }
+
+        &.success {
+            background-color: $success-color;
+            color: white;
+        }
+    }
+}
+
+p.associate-success {
+    max-width: 80%;
+    margin: 1rem auto;
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid #c3e6cb;
+    background-color: #d4edda;
+    color: $success-color;
+}

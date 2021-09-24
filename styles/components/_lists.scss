@@ -1,0 +1,420 @@
+ul {
+    list-style: none;
+    margin-left: 40px;
+
+    li {
+        line-height: 1.5;
+        margin: 1rem 0;
+        font-size: 0.9rem;
+
+        &::before {
+            content: " ";
+            display: inline-block;
+            background-color: $primary-color;
+            width: 16px;
+            height: 16px;
+            border-radius: 15px;
+            margin-right: 10px;
+            margin-bottom: -3px;
+        }
+    
+
+        ul {
+            margin-top: 20px;
+            padding-bottom: 0;
+
+            li {
+                font-size: 0.8rem;
+
+                &::before {
+                    content: " ";
+                    display: inline-block;
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 10px;
+                    margin-right: 10px;
+                    margin-bottom: 0px;
+                }
+            }
+        }
+
+        ol {
+            margin-top: 20px;
+            
+            li {
+                font-size: 0.8rem;
+                line-height: 1.5;
+                margin: 20px 0;
+                list-style-position: inside;
+
+                &::before {
+                    counter-increment:li;
+                    content: counter(li);
+                    font-weight: bold;
+                    font-size: 1rem;
+                    text-align: center;
+                    display: inline-block;
+                    padding: 1px 0 0;
+                    width: 1.6rem;
+                    height: 1.6rem;
+                    border-radius: 0;
+                    margin-right: 12px;
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+  
+}
+
+
+ol {
+    list-style: none;
+    margin-left: 40px;
+    counter-reset: li;
+
+    li {
+        line-height: 1.5;
+        margin: 1rem 0;
+        font-size: 0.9rem;
+        list-style-position: inside;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            top: 0;
+            left: -2rem;
+            counter-increment:li;
+            content: counter(li);
+            background: $primary-color;
+            color: #fff;
+            font-family: $text-bold-font;
+            font-size: 0.8rem;
+            text-align: center;
+            display: inline-block;
+            width: 1.5rem;
+            height: 1.5rem;            
+            @include flex(row, center, center);
+        }
+
+        &#two::before {
+            content: '2'
+        }
+        &#three::before {
+            content: '3'
+        }
+        &#four::before {
+            content: '4'
+        }
+        &#five::before {
+            content: '5'
+        }
+        &#six::before {
+            content: '6'
+        }
+        &#seven::before {
+            content: '7'
+        }
+        &#eight::before {
+            content: '8'
+        }
+        &#nine::before {
+            content: '9'
+        }
+        &#ten::before {
+            content: '10'
+        }
+
+        ul {
+            margin-top: 20px;
+            margin-left: 20px;
+
+            li {
+                font-size: 0.8rem;
+
+                &::before {
+                    content: " ";
+                    position: initial;
+                    display: inline-block;
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 10px;
+                    margin-right: 10px;
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+  
+}
+
+
+ol li ol {
+    
+    margin-top: 20px;
+    
+    li {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin: 20px 0;
+        list-style-position: inside;
+
+        &::before {
+            counter-increment:li;
+            content: counter(li);
+            font-weight: bold;
+            font-size: 1rem;
+            text-align: center;
+            display: inline-block;
+            padding: 1px 0 0;
+            width: 1.6rem;
+            height: 1.6rem;
+            border-radius: 0;
+            margin-right: 12px;
+            margin-bottom: 5px;
+        }
+    }
+}
+
+ol.abc {
+
+    li {
+
+        &::before {
+            counter-increment:li;
+            content: counter(li, lower-alpha);
+        }
+
+    }
+  
+}
+
+ul.tempor li:nth-child(1),
+ol.tempor li:nth-child(1),
+.fade-one {
+    opacity: 0;
+    @include noselect;
+    animation-name: fade-in;
+    animation-duration: 300ms;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+ul.tempor li:nth-child(2),
+ol.tempor li:nth-child(2),
+.fade-two {
+    opacity: 0;
+    @include noselect;
+    animation-name: fade-in;
+    animation-duration: 300ms;
+    animation-delay: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+ul.tempor li:nth-child(3),
+ol.tempor li:nth-child(3),
+.fade-three {
+    opacity: 0;
+    @include noselect;
+    animation-name: fade-in;
+    animation-duration: 300ms;
+    animation-delay: 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+ul.tempor li:nth-child(4),
+ol.tempor li:nth-child(4),
+.fade-four {
+    opacity: 0;
+    @include noselect;
+    animation-name: fade-in;
+    animation-duration: 300ms;
+    animation-delay: 4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+ul.tempor li:nth-child(5),
+ol.tempor li:nth-child(5),
+.fade-five {
+    opacity: 0;
+    @include noselect;
+    animation-name: fade-in;
+    animation-duration: 300ms;
+    animation-delay: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+ul.tempor li:nth-child(6),
+ol.tempor li:nth-child(6),
+.fade-six {
+    opacity: 0;
+    @include noselect;
+    animation-name: fade-in;
+    animation-duration: 300ms;
+    animation-delay: 6s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+ul.tempor li:nth-child(7),
+ol.tempor li:nth-child(7),
+.fade-seven {
+    opacity: 0;
+    @include noselect;
+    animation-name: fade-in;
+    animation-duration: 300ms;
+    animation-delay: 7s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+ul.tempor li:nth-child(8),
+ol.tempor li:nth-child(8),
+.fade-eight {
+    opacity: 0;
+    @include noselect;
+    animation-name: fade-in;
+    animation-duration: 300ms;
+    animation-delay: 8s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+ul.tempor li:nth-child(9),
+ol.tempor li:nth-child(9),
+.fade-nine {
+    opacity: 0;
+    @include noselect;
+    animation-name: fade-in;
+    animation-duration: 300ms;
+    animation-delay: 9s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+ul.tempor li:nth-child(10),
+ol.tempor li:nth-child(10),
+.fade-ten {
+    opacity: 0;
+    @include noselect;
+    animation-name: fade-in;
+    animation-duration: 300ms;
+    animation-delay: 10s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+ul.tempor li:nth-child(11),
+ol.tempor li:nth-child(11) {
+    opacity: 0;
+    @include noselect;
+    animation-name: fade-in;
+    animation-duration: 300ms;
+    animation-delay: 11s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+ul.tempor li:nth-child(12),
+ol.tempor li:nth-child(12) {
+    opacity: 0;
+    @include noselect;
+    animation-name: fade-in;
+    animation-duration: 300ms;
+    animation-delay: 12s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+ul.tempor li:nth-child(13),
+ol.tempor li:nth-child(13) {
+    opacity: 0;
+    @include noselect;
+    animation-name: fade-in;
+    animation-duration: 300ms;
+    animation-delay: 13s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+ul.tempor li:nth-child(14),
+ol.tempor li:nth-child(14) {
+    opacity: 0;
+    @include noselect;
+    animation-name: fade-in;
+    animation-duration: 300ms;
+    animation-delay: 14s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+ul.tempor li:nth-child(15),
+ol.tempor li:nth-child(15) {
+    opacity: 0;
+    @include noselect;
+    animation-name: fade-in;
+    animation-duration: 300ms;
+    animation-delay: 15s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+ul.tempor li:nth-child(16),
+ol.tempor li:nth-child(16) {
+    opacity: 0;
+    @include noselect;
+    animation-name: fade-in;
+    animation-duration: 300ms;
+    animation-delay: 16s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+ul.tempor li:nth-child(17),
+ol.tempor li:nth-child(17) {
+    opacity: 0;
+    @include noselect;
+    animation-name: fade-in;
+    animation-duration: 300ms;
+    animation-delay: 17s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+ul.tempor li:nth-child(18),
+ol.tempor li:nth-child(18) {
+    opacity: 0;
+    @include noselect;
+    animation-name: fade-in;
+    animation-duration: 300ms;
+    animation-delay: 8s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+ul.tempor li:nth-child(19),
+ol.tempor li:nth-child(19) {
+    opacity: 0;
+    @include noselect;
+    animation-name: fade-in;
+    animation-duration: 300ms;
+    animation-delay: 19s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+ul.tempor li:nth-child(20),
+ol.tempor li:nth-child(20) {
+    opacity: 0;
+    @include noselect;
+    animation-name: fade-in;
+    animation-duration: 300ms;
+    animation-delay: 20s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}

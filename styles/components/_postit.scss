@@ -1,0 +1,47 @@
+.post-it {
+    width: 280px;
+    height: 280px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 200;
+    padding: 0.5rem 0.8rem;
+    background-color: #ffffcc;
+    box-shadow: -2px -2px 3px lightgray,
+                 2px 2px 3px lightgray,
+                 -2px 2px 3px lightgray,
+                 2px -2px 3px lightgray;
+    display: none;
+    transition: opacity 600ms linear;
+
+    &-header {
+        @include flex(row, flex-end, center);
+        span {
+            font-size: 2rem;
+            cursor: pointer;
+            @include noselect;
+        }
+    }
+
+    &-body {
+        textarea {
+            height: 200px;
+            width: 100%;        
+            border: none;
+            background-color: transparent;
+            font-size: 1rem;
+            font-family: $text-font;
+            color: $regular-font-color;
+            resize: none;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    &.open {
+        display: block;
+    }
+
+}

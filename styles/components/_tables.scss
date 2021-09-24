@@ -1,0 +1,122 @@
+// Vertical table
+
+.tab {
+    display: flex;
+    box-shadow: $shadow;
+    background-color: white;
+    max-width: 1080;
+    margin: 0 auto;
+    border: 1px solid #d3d3d3;
+    transition: 400ms all ease-in;
+
+    .tabs{
+        width: 30%;
+
+        div {
+            cursor: pointer;
+            border-bottom: 1px solid #d8d8d8;
+            border-right: 1px solid #d8d8d8;
+            @include flex(row, center, center);
+            padding: 1rem;
+            transition: 400ms all ease-in;
+
+            &:hover {
+                color: white;
+                background: lightgrey;
+            }
+
+            &.check {
+                color: white;
+                background-color: $primary-color;
+            }
+
+            p {
+                margin-bottom: 0;
+                text-align: center;
+                 @include noselect;
+            }
+        }
+    }
+
+    .content-tabs {
+        width: 70%;
+        position: relative;
+        padding: 20px;
+
+        .content-tab {
+            position: absolute;
+            top: 5px;
+            left: 0;
+            padding: 1rem;
+            background-color: white;
+            display: none;
+            opacity: 0;
+            transition: opacity 1s ease;
+
+            // &.show {
+                display: block;
+                z-index: 10;
+            // }
+
+            &.visible {
+                opacity: 1;
+            }
+        }
+    }
+
+}
+
+@media (max-width: $laptop-size) {
+    .tab {
+        width: 100%;
+
+        .tabs { width: 40%;}
+        .content-tabs { width: 60%;}
+    }
+}
+
+table.activity {
+    width: 100%;
+
+    th {
+        padding: 0.5rem;
+        background-color: $primary-color;
+        border: 1px solid $primary-color;
+        color: white;
+    }
+
+    td {
+        border: 1px solid $primary-color;
+        padding: 0.5rem;
+
+        input {
+            border: none;
+            border-radius: 0;
+            padding: 0.5rem;
+            font-size: 1rem;
+            color: $regular-font-color;
+            font-family: $text-font;
+
+            &::placeholder {
+                font-size: 1rem;
+                color: $regular-font-color;
+                font-family: $text-font;
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    &.orange {
+        th {
+            background-color: orange;
+            border: 1px solid orange;
+        }
+
+        td {
+            border: 1px solid orange;
+        }
+    }
+}

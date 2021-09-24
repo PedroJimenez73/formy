@@ -1,0 +1,40 @@
+.video-note {
+    border: 1px solid #d3d3d3;
+    position: relative;
+    box-shadow: $shadow;
+    background-color: white;
+    padding: 1.5rem;
+    width: calc(100% - 2rem);
+    max-width: 480px;
+    margin: 0 auto;
+
+    p {
+        font-size: 1.1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid lightgray;
+    }
+
+    textarea {
+        width: 100%;
+        height: 360px;
+        display: block;
+        margin: 0 auto;
+        resize: none;
+        border: 1px solid $primary-color;
+        padding: 1rem;
+        font-size: 1rem;
+        line-height: 1.4;
+        font-family: inherit;
+        white-space: pre-wrap;
+        color: rgb(60, 60, 60);
+    }
+
+}
+
+@media (max-width: $tablet-size) {
+    .video-note {
+        textarea {
+            margin-top: 1rem;
+        }
+    }
+}

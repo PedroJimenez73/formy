@@ -1,0 +1,141 @@
+.tree {
+    overflow-x: auto;
+    cursor: ew-resize;
+    padding-bottom: 1rem;
+
+    &::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 2px;
+        background-color: lightgray;
+    }
+
+    ul {
+        list-style: none;
+        padding-left: 0px;
+        padding-top: 20px; 
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-left: 0;
+
+        li {
+            float: left; 
+            text-align: center;
+            list-style-type: none;
+            position: relative;
+            padding: 20px 5px 5px 5px;
+            display: flex;
+            flex-direction: column;
+            margin: 0 0 0 0;
+
+            &:first-child {
+                margin: 0 0 0 0;
+            }
+
+            &:last-child {
+                margin: 0 0 0 0;
+            }
+
+            &::before {
+                content: '';
+                position: absolute; 
+                top: 0; 
+                right: 50%;
+                width: 50%; 
+                height: 18px;
+                margin-left: 0;
+                margin-right: 0;
+                margin-bottom: 0;
+                border-top: 3px solid #959595;
+                border-radius: 0;
+                background-color: initial;
+            }
+
+            &::after {
+                content: '';
+                position: absolute; 
+                top: 0; 
+                right: auto;
+                left: 50%;
+                width: 50%; 
+                height: 18px;
+                margin-left: 0;
+                margin-right: 0;
+                margin-bottom: 0;
+                border-top: 3px solid #959595;
+                border-left: 3px solid #7a7a7a;
+                border-radius: 0;
+                background-color: initial;
+            }
+
+            &:last-child::before {
+                border-right: 3px solid #7a7a7a;
+                border-radius: 0 5px 0 0;
+            }
+
+            &:first-child::after {
+                border-left: 3px solid #7a7a7a;
+                border-radius: 5px 0 0 0; 
+            }
+
+            &:only-child { 
+                padding-top: 0px;
+            }
+
+            &:only-child::after, 
+            &:only-child::before {
+                border: 0 none;
+            }
+
+            &:first-child::before, 
+            &:last-child::after {
+                border: 0 none;
+            }
+
+            .tree-item {
+                max-width: 150px;
+                min-width: 120px;
+                padding: 0.5rem;
+                font-size: 0.9rem;
+                margin-bottom: 0;
+                background-color: lightgray;
+                @include border-design();
+                align-self: center;
+                text-align: start;
+                text-align: center;
+                box-shadow: $shadow;
+
+                &-level1{
+                    background-color: $primary-color;
+                }
+
+                &-level2{
+                    background-color: #9bbfd0;
+                }
+
+                @include noselect;
+
+            }
+        }
+
+        li ul {
+            margin-top: 0;
+        }
+
+        ul::before {
+            content: '';
+            position: absolute; 
+            top: 0; 
+            left: 50%;
+            border-left:3px solid #7a7a7a;
+            width: 0; 
+            height: 20px;
+        }
+    }
+}

@@ -1,0 +1,46 @@
+.link-card {
+    height: 360px;
+    width: 360px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    cursor: pointer;
+    box-shadow: $shadow;
+
+    > div {
+        height: 360px;
+        width: 360px;
+        @include flex(column, flex-end, center);
+        transition: 600ms ease-in-out background-color;
+        position: relative;
+
+        p {
+            margin-bottom: 0;
+            text-align: center;
+            padding: 0.5rem 1rem;
+            width: 100%;
+            background-color: $primary-color;
+            color: white;
+            font-family: $title-font;
+        }
+
+        img {
+            height: 60px;
+            width: 60px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+        }
+
+        &:hover {
+            background-color: #235d94c7;
+
+            img {
+                display: block;
+            }
+        }
+    }
+
+}

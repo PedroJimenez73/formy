@@ -1,0 +1,45 @@
+.pic-carousel-container {
+    position: relative;
+    height: 300px;
+    padding: 1rem;
+
+    img {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .arrow-left-container {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+
+    .arrow-right-container {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+    }
+
+}
+
+.arrow-right-icon {
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 4px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.arrow-left-icon {
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 4px;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
