@@ -13,8 +13,8 @@ export default async (req, res) => {
   `;
 
   const data = {
-    to: 'info@sapienslearning.com',
-    from: 'pedro.jimenez@iscaconsulting.com',
+    to: 'marc.corbalan@iscaconsulting.com',
+    from: 'info@iscaconsulting.com',
     subject: `Nuevo mensaje del formulario contacto`,
     text: message,
     html: message.replace(/\r\n/g, '<br />'),
