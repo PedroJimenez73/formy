@@ -63,7 +63,15 @@ form {
             margin: 0 auto;
         }
         label {
-            padding-top: 0.5rem
+            padding-top: 1rem
+        }
+    }
+}
+
+@media (max-width: $tablet-size) {
+    form {
+        label {
+            padding-top: 1rem
         }
     }
 }
