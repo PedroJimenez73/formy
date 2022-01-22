@@ -55,9 +55,9 @@ export default async (req, res) => {
    }
     transporter.sendMail(mailData, function (err, info) {
         if (err)
-            console.log(err)
+            res.status(500).json({ status: 'ERROR' });
         else
-            console.log(info)
+            res.status(200).json({ status: 'OK' });
     })
-    res.status(200).json({ status: 'OK' });
+    
 }
