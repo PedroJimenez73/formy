@@ -48,7 +48,7 @@ export default async (req, res) => {
 
     const mailData = {
         from: 'info@iscaconsulting.com',
-        to: 'pedro.jimenez@iscaconsulting.com',
+        to: 'marc.corbalan@iscaconsulting.com',
         subject: `Nuevo mensaje del formulario contacto`,
         text: message,
         html: message.replace(/\r\n/g, '<br />'),
