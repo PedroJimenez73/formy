@@ -30,9 +30,9 @@ export default async (req, res) => {
     let nodemailer = require('nodemailer')
     const transporter = nodemailer.createTransport({
         port: 465,
-        host: "smtp.gmail.com",
+        host: "smtp.ionos.es",
         auth: {
-            user: 'cfticmongo@gmail.com',
+            user: 'pedro@itweblearning.com',
             pass: process.env.PASS,
         },
         secure: true,
@@ -48,7 +48,7 @@ export default async (req, res) => {
 
     const mailData = {
         from: 'info@iscaconsulting.com',
-        to: 'marc.corbalan@iscaconsulting.com',
+        to: 'pedro.jimenez@iscaconsulting.com',
         subject: `Nuevo mensaje del formulario contacto`,
         text: message,
         html: message.replace(/\r\n/g, '<br />'),
