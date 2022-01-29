@@ -74,8 +74,8 @@ export default function ContactForm() {
                 <div className="buttons">
                     <div>
                         <input onClick={() => handleAccept()} type="checkbox" id="accept" />
-                        <label htmlFor="accept">
-                            He leído y acepto la <a href="http://isca.itweblearning.com/aviso-legal" target="_blank">política de privacidad</a>  de este sitio web
+                        <label htmlFor="accept" style={{color: "#ffffffcc"}}>
+                            He leído y acepto la <a style={{color: "white"}} href="http://isca.itweblearning.com/aviso-legal" target="_blank">política de privacidad</a>  de este sitio web
                         </label>
                     </div>
                     <button type="submit">Enviar</button>
